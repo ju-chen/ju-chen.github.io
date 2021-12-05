@@ -253,7 +253,7 @@
             </tr></tbody>
       </table>
 	
-	
+      <br><hr>
 	<table align=center width=850px>
 	<center><h1>Abstract</h1></center>
 	<tr>
@@ -265,74 +265,7 @@
 	<br>
 	<hr>
 	
-
-	
-<!--       <br><hr> -->
-      <center> <h2> Data Synthesis </h2> </center>
-      <p style="text-align:justify; text-justify:inter-ideograph;"><left>
-	  Illustration of the data simulation pipeline.
-	  (a) Data simulation pipeline. We first simulate the tumor with a transformed image and a generated 3D mask, which provide texture and shape respectively. Then the synthetic data is composed by blending the simulated tumor into the normal image.
-	  (b) Visualisation of shape simulation. The first row presents the 3D polyhedrons with various shapes, sizes and locations, and the second row shows the binary masks.
-	  (c) Visualisation of texture simulation. We have displayed a randomly selected normal image undergoing different transformations functions (top row), the corresponding simulated tumor (second row), and synthetic training data (bottom row) in columns 2-8. 
-	</left></p>
-        <p><img class="left"  src="./resources/supple_fig_datasyn.png" width="800px"></p>
-      <br>
-      <hr>
-
-      <center><h2>Visualizations of Zero-shot Tumor Segmentation </h2></center>
-      <p><b>2D Visualization </b> </p>
-      <p><left>
-	      From left to right: input volume, ground truth (green) vs. predicted mask (red), reconstructed normal organ, reconstructed tumor, predicted mask.
-      </left></p>
-      <p><img class="center"  src="./resources/result.png" width="800px"></p>
-	
-      <p><b>3D Visualization </b> </p>
-      <p><left>
-	      From left to right: input volume, ground truth, reconstructed normal organ, reconstructed tumor, predicted mask.
-      </left></p>
-      <p><img class="left"  src="./resources/result_bt/concat_30.gif" width="800px"></p>
-      <p><img class="left"  src="./resources/result_bt/concat_5.gif" width="800px"></p>
-      <p><img class="left"  src="./resources/result_lits/concat_4.gif" width="800px"></p>
-      <p><img class="left"  src="./resources/result_lits/concat_8.gif" width="800px"></p>
-      <br>
-      <hr>
-
-      <center><h2>Results</h2></center>
-      <p><b>R1: Fully Supervised Fine-tuning </b> </p>
-      <p><left>
-	      Compare with SOTA self-supervised methods on WTS (brain whole tumor segmentation) and LTS (liver tumor segmentation).
-      </left></p>
-      <p><img class="center"  src="./resources/table_1.png" width="800px"></p>
-      <p><left>
-	      Compare with SOTA self-supervised methods on BTS (Whole tumor, Tumor core and Enhanced tumor segmentation).
-      </left></p>
-      <p><img class="center"  src="./resources/table_2.png" width="800px"></p>
-	
-      <p><b>R2: Analysis of Model Transferability </b> </p>	
-	<div class="container">
-		<div class="image">
-			<img style="width:400px" src='./resources/result_2.png'></img>
-		</div>
-		<div class="text"> 
-			<p> We study the usefulness of self-supervised learning by varying the number of available volume annotations. 
-				For both tasks, our proposed method shows superior performance on all supervision level.  
-			</p>
-		</div>
-	</div>
-      <p><img class="center"  src="./resources/table_3.png" width="800px"></p>
-	
-      <p><b>R3: Results of Zero-shot Tumor Segmentation </b></p>
-	<div class="container">
-		<div class="image">
-			<img style="width:400px" src='./resources/table.png'></img>
-		</div>
-		<div class="text"> 
-			<p>  We compare with approaches that advocate zero-shot tumor segmentation, <i>i.e.</i> the state-of-the-art unsupervised anomaly segmentation methods.
-				As shown in the Table, our approach surpasses the other ones by a large margin.
-			</p>
-		</div>
-	</div>
-      
+   
       <br>
       <hr>
       <center> <h2> Acknowledgements </h2> </center>
