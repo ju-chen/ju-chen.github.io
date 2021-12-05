@@ -1,0 +1,347 @@
+
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <!--
+  <script src="./resources/jsapi" type="text/javascript"></script>
+  <script type="text/javascript" async>google.load("jquery", "1.3.2");</script>
+ -->
+
+<style type="text/css">
+  @font-face {
+   font-family: 'Avenir Book';
+   src: url("./fonts/Avenir_Book.ttf"); /* File to be stored at your site */
+   }
+
+  body {
+    font-family: "Avenir Book", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight:300;
+    font-size:14px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 800px;
+  }
+  h1 {
+    font-weight:300;
+  }
+  h2 {
+    font-weight:300;
+  }
+
+  p {
+    font-weight:300;
+    line-height: 1.4;
+  }
+
+  code {
+    font-size: 0.8rem;
+    margin: 0 0.2rem;
+    padding: 0.5rem 0.8rem;
+    white-space: nowrap;
+    background: #efefef;
+    border: 1px solid #d3d3d3;
+    color: #000000;
+    border-radius: 3px;
+  }
+
+  pre > code {
+    display: block;
+    white-space: pre;
+    line-height: 1.5;
+    padding: 0;
+    margin: 0;
+  }
+
+  pre.prettyprint > code {
+    border: none;
+  }
+
+
+  .container {
+        display: flex;
+        align-items: center;
+        justify-content: center
+  }
+  .image {
+        flex-basis: 40%
+  }
+  .text {
+        padding-left: 20px;
+        padding-right: 20px;
+  }
+
+  .disclaimerbox {
+    background-color: #eee;
+    border: 1px solid #eeeeee;
+    border-radius: 10px ;
+    -moz-border-radius: 10px ;
+    -webkit-border-radius: 10px ;
+    padding: 20px;
+  }
+
+  video.header-vid {
+    height: 140px;
+    border: 1px solid black;
+    border-radius: 10px ;
+    -moz-border-radius: 10px ;
+    -webkit-border-radius: 10px ;
+  }
+
+  img.header-img {
+    height: 140px;
+    border: 1px solid black;
+    border-radius: 10px ;
+    -moz-border-radius: 10px ;
+    -webkit-border-radius: 10px ;
+  }
+
+  img.rounded {
+    border: 0px solid #eeeeee;
+    border-radius: 10px ;
+    -moz-border-radius: 10px ;
+    -webkit-border-radius: 10px ;
+
+  }
+
+  a:link,a:visited
+  {
+    color: #1367a7;
+    text-decoration: none;
+  }
+  a:hover {
+    color: #208799;
+  }
+
+  td.dl-link {
+    height: 160px;
+    text-align: center;
+    font-size: 22px;
+  }
+
+  .layered-paper-big { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
+    box-shadow:
+            0px 0px 1px 1px rgba(0,0,0,0.35), /* The top layer shadow */
+            5px 5px 0 0px #fff, /* The second layer */
+            5px 5px 1px 1px rgba(0,0,0,0.35), /* The second layer shadow */
+            10px 10px 0 0px #fff, /* The third layer */
+            10px 10px 1px 1px rgba(0,0,0,0.35), /* The third layer shadow */
+            15px 15px 0 0px #fff, /* The fourth layer */
+            15px 15px 1px 1px rgba(0,0,0,0.35), /* The fourth layer shadow */
+            20px 20px 0 0px #fff, /* The fifth layer */
+            20px 20px 1px 1px rgba(0,0,0,0.35), /* The fifth layer shadow */
+            25px 25px 0 0px #fff, /* The fifth layer */
+            25px 25px 1px 1px rgba(0,0,0,0.35); /* The fifth layer shadow */
+    margin-left: 10px;
+    margin-right: 45px;
+  }
+
+
+  .layered-paper { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
+    box-shadow:
+            0px 0px 1px 1px rgba(0,0,0,0.35), /* The top layer shadow */
+            5px 5px 0 0px #fff, /* The second layer */
+            5px 5px 1px 1px rgba(0,0,0,0.35), /* The second layer shadow */
+            10px 10px 0 0px #fff, /* The third layer */
+            10px 10px 1px 1px rgba(0,0,0,0.35); /* The third layer shadow */
+    margin-top: 5px;
+    margin-left: 10px;
+    margin-right: 30px;
+    margin-bottom: 5px;
+  }
+
+  .vert-cent {
+    position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+  }
+
+  hr
+  {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+  }
+</style>
+
+	<title>Self-supervised Tumor Segmentation through Layer Decomposition</title>
+</head>
+
+<body>
+	<br>
+	<center>
+	<span style="font-size:36px">Prompting Visual-Language Models for Efficient Video Understanding</span><br><br><br>
+	</center>
+	<table align="center" width="800px">
+            <tbody><tr>
+                    <td align="center" width="160px">
+              <center>
+                <span style="font-size:16px"><a href="https://mediabrain.sjtu.edu.cn/chenju/">Chen Ju</a><sup>1</sup></span>
+                </center>
+                </td>
+                    <td align="center" width="160px">
+              <center>
+                <span style="font-size:16px"><a href="https://tengdahan.github.io/">Tengda Han</a><sup>2</sup></span>
+                </center>
+                </td>
+                    <td align="center" width="160px">
+              <center>
+                <span style="font-size:16px"><a href="https://github.com/DyeKuu">Kunhao Zheng</a><sup>1</sup></span>
+                </center>
+                </td>
+                    <td align="center" width="160px">
+	      <center>
+                <span style="font-size:16px"><a href="https://mediabrain.sjtu.edu.cn/yazhang/">Ya Zhang</a><sup>1</sup></span>
+                </center>
+		</td>
+                    <td align="center" width="160px">	    
+              <center>
+                <span style="font-size:16px"><a href="https://weidixie.github.io/">Weidi Xie</a><sup>2</sup></span>
+                </center>
+            </tr>
+
+        </tbody></table><br>
+	
+	  <table align="center" width="700px">
+            <tbody><tr>
+                    <td align="center" width="50px">
+              <center>
+                    <span style="font-size:16px"></span>
+                </center>
+                </td>
+                    <td align="center" width="300px">
+              <center>
+                    <span style="font-size:16px"><sup>1</sup>CMIC, Shanghai Jiao Tong University</span>
+                </center>
+                </td>
+                    <td align="center" width="300px">
+              <center>
+                    <span style="font-size:16px"><sup>2</sup>VGG, University of Oxford</span>
+                </center>
+                </td>
+        </tr></tbody></table>
+	
+	
+	<table align="center" width="700px">
+            <tbody><tr>
+              <td align="center" width="200px">
+                <center>
+                  <br>
+                  <span style="font-size:20px">
+                    <a href="https://github.com/ju-chen/Efficient-Prompt"> Code </a>
+                  </span>
+                </center>
+              </td>
+
+              <td align="center" width="200px">
+                <center>
+                  <br>
+                  <span style="font-size:20px">
+                    <a href="https://arxiv.org/pdf/2109.03230.pdf"> ArXiv </a>
+                  </span>
+                </center>
+              </td>
+
+              <td align="center" width="200px">
+                <center>
+                  <br>
+                  <span style="font-size:20px">
+                    <a href="./cite.txt"> Bibtex </a>
+                  </span>
+                </center>
+              </td>
+            </tr></tbody>
+      </table>
+	
+	
+	<table align=center width=850px>
+	<center><h1>Abstract</h1></center>
+	<tr>
+		<td>
+			Visual-language pre-training has shown great success for learning joint visual-textual representations from large-scale web data, demonstrating remarkable ability for zero-shot generalization. This paper presents a simple method to efficiently adapt such one pre-trained visual-language model to novel tasks with minimal training, here, we consider video understanding tasks. Specifically, we propose to optimise a few random vectors, termed as ``continuous prompt vectors'', that convert the novel tasks into the same format as the pre-training objectives. In addition, to bridge the gap between static images and videos, temporal information is encoded by lightweight Transformers stacking on top of the frame-wise visual features. Experimentally, we conduct extensive ablation studies to analyse the critical components and their necessities. On 9 public benchmarks of action recognition, action localisation, and text-video retrieval, across closed-set, few-shot, open-set scenarios, we achieve competitive or state-of-the-art performance to existing methods, despite using significantly fewer training parameters.
+		</td>
+	</tr>
+	</table>
+	<br>
+	<hr>
+	
+
+	
+      <br><hr>
+      <center> <h2> Data Synthesis </h2> </center>
+      <p style="text-align:justify; text-justify:inter-ideograph;"><left>
+	  Illustration of the data simulation pipeline.
+	  (a) Data simulation pipeline. We first simulate the tumor with a transformed image and a generated 3D mask, which provide texture and shape respectively. Then the synthetic data is composed by blending the simulated tumor into the normal image.
+	  (b) Visualisation of shape simulation. The first row presents the 3D polyhedrons with various shapes, sizes and locations, and the second row shows the binary masks.
+	  (c) Visualisation of texture simulation. We have displayed a randomly selected normal image undergoing different transformations functions (top row), the corresponding simulated tumor (second row), and synthetic training data (bottom row) in columns 2-8. 
+	</left></p>
+        <p><img class="left"  src="./resources/supple_fig_datasyn.png" width="800px"></p>
+      <br>
+      <hr>
+
+      <center><h2>Visualizations of Zero-shot Tumor Segmentation </h2></center>
+      <p><b>2D Visualization </b> </p>
+      <p><left>
+	      From left to right: input volume, ground truth (green) vs. predicted mask (red), reconstructed normal organ, reconstructed tumor, predicted mask.
+      </left></p>
+      <p><img class="center"  src="./resources/result.png" width="800px"></p>
+	
+      <p><b>3D Visualization </b> </p>
+      <p><left>
+	      From left to right: input volume, ground truth, reconstructed normal organ, reconstructed tumor, predicted mask.
+      </left></p>
+      <p><img class="left"  src="./resources/result_bt/concat_30.gif" width="800px"></p>
+      <p><img class="left"  src="./resources/result_bt/concat_5.gif" width="800px"></p>
+      <p><img class="left"  src="./resources/result_lits/concat_4.gif" width="800px"></p>
+      <p><img class="left"  src="./resources/result_lits/concat_8.gif" width="800px"></p>
+      <br>
+      <hr>
+
+      <center><h2>Results</h2></center>
+      <p><b>R1: Fully Supervised Fine-tuning </b> </p>
+      <p><left>
+	      Compare with SOTA self-supervised methods on WTS (brain whole tumor segmentation) and LTS (liver tumor segmentation).
+      </left></p>
+      <p><img class="center"  src="./resources/table_1.png" width="800px"></p>
+      <p><left>
+	      Compare with SOTA self-supervised methods on BTS (Whole tumor, Tumor core and Enhanced tumor segmentation).
+      </left></p>
+      <p><img class="center"  src="./resources/table_2.png" width="800px"></p>
+	
+      <p><b>R2: Analysis of Model Transferability </b> </p>	
+	<div class="container">
+		<div class="image">
+			<img style="width:400px" src='./resources/result_2.png'></img>
+		</div>
+		<div class="text"> 
+			<p> We study the usefulness of self-supervised learning by varying the number of available volume annotations. 
+				For both tasks, our proposed method shows superior performance on all supervision level.  
+			</p>
+		</div>
+	</div>
+      <p><img class="center"  src="./resources/table_3.png" width="800px"></p>
+	
+      <p><b>R3: Results of Zero-shot Tumor Segmentation </b></p>
+	<div class="container">
+		<div class="image">
+			<img style="width:400px" src='./resources/table.png'></img>
+		</div>
+		<div class="text"> 
+			<p>  We compare with approaches that advocate zero-shot tumor segmentation, <i>i.e.</i> the state-of-the-art unsupervised anomaly segmentation methods.
+				As shown in the Table, our approach surpasses the other ones by a large margin.
+			</p>
+		</div>
+	</div>
+      
+      <br>
+      <hr>
+      <center> <h2> Acknowledgements </h2> </center>
+      <p> 
+	      Based on a template by <a href="http://richzhang.github.io/">Richard Zhang</a>.
+      </p>
+      <br>
+
+
+<br>
+</body>
+</html>
