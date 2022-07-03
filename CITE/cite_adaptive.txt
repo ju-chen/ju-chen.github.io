@@ -1,0 +1,6 @@
+@article{ju2021adaptive,
+  title={Adaptive mutual supervision for weakly-supervised temporal action localization},
+  author={Ju, Chen and Zhao, Peisen and Chen, Siheng and Zhang, Ya and Zhang, Xiaoyun and Tian, Qi},
+  journal={arXiv preprint arXiv:2104.02357},
+  year={2021}
+}

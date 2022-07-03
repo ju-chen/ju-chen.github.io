@@ -1,0 +1,7 @@
+@inproceedings{zhao2020bottom,
+  title={Bottom-up temporal action localization with mutual regularization},
+  author={Zhao, Peisen and Xie, Lingxi and Ju, Chen and Zhang, Ya and Wang, Yanfeng and Tian, Qi},
+  booktitle={European Conference on Computer Vision},
+  year={2020},
+  organization={Springer}
+}

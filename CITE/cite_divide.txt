@@ -1,0 +1,6 @@
+@inproceedings{ju2021divide,
+  title={Divide and conquer for single-frame temporal action localization},
+  author={Ju, Chen and Zhao, Peisen and Chen, Siheng and Zhang, Ya and Wang, Yanfeng and Tian, Qi},
+  booktitle={Proceedings of the IEEE/CVF International Conference on Computer Vision},
+  year={2021}
+}
