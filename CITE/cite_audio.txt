@@ -1,0 +1,6 @@
+@inproceedings{liu2022exploiting,
+  title={Exploiting Transformation Invariance and Equivariance for Self-supervised Sound Localisation},
+  author={Liu, Jinxiang and Ju, Chen and Xie, Weidi and Zhang, Ya},
+  booktitle={Proceedings of the 29th ACM International Conference on Multimedia},
+  year={2022}
+}
