@@ -1,7 +1,7 @@
 @inproceedings{ju2022prompting,
   title={Prompting Visual-Language Models for Efficient Video Understanding},
   author={Chen Ju and Tengda Han and Kunhao Zheng and Ya Zhang and Weidi Xie},
-  booktitle={European Conference on Computer Vision},
+  booktitle={European Conference on Computer Vision (ECCV)},
   year={2022},
   organization={Springer}
 }
