@@ -1,0 +1,6 @@
+@article{ju2022distilling,
+  title={Distilling Vision-Language Pre-training to Collaborate with Weakly-Supervised Temporal Action Localization},
+  author={Ju, Chen and Zheng, Kunhao and Liu, Jinxiang and Zhao, Peisen and Zhang, Ya and Chang, Jianlong and Wang, Yanfeng and Tian, Qi},
+  journal={arXiv preprint arXiv:2212.09335},
+  year={2022}
+}
